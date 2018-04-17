@@ -13,6 +13,8 @@
 Quad_Node *Quad_Node_new(){
 	Quad_Node *quad_ptr = malloc( sizeof(Quad_Node) );
 
+	quad_ptr->op = QUAD_OP_UNKNOWN;
+
 	quad_ptr->arg_1_type = QUAD_ADDR_TYPE_EMPTY;
 	quad_ptr->arg_2_type = QUAD_ADDR_TYPE_EMPTY;
 	quad_ptr->result_type = QUAD_ADDR_TYPE_EMPTY;

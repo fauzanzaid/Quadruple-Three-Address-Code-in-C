@@ -7,8 +7,11 @@
 ///////////
 
 typedef enum Quad_Op_type {
+
+	QUAD_OP_IDENTITY = 1,
+
 	// Unary
-	QUAD_OP_NEGATE = 1,
+	QUAD_OP_NEGATE,
 	QUAD_OP_NOT,
 
 	// Binary arith
@@ -22,11 +25,11 @@ typedef enum Quad_Op_type {
 
 	// Copy
 	QUAD_OP_COPY,
-	QUAD_OP_COPY_INDEX_R,
-	QUAD_OP_COPY_INDEX_L,
+	QUAD_OP_COPY_INDEXED_R,
+	QUAD_OP_COPY_INDEXED_L,
 	QUAD_OP_COPY_ADDRESS_R,
-	QUAD_OP_COPY_DEREF_R,
-	QUAD_OP_COPY_DEREF_L,
+	QUAD_OP_COPY_DEREFED_R,
+	QUAD_OP_COPY_DEREFED_L,
 
 
 	// Jump
