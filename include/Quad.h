@@ -67,7 +67,7 @@ typedef enum Quad_AddrType_type{
 
 typedef union Quad_Addr{
 	void *name;
-	void *temp;
+	int temp;
 	long long constant;
 } Quad_Addr;
 
