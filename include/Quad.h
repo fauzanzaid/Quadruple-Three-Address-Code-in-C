@@ -48,6 +48,8 @@ typedef enum Quad_Op_type {
 } Quad_Op_type;
 
 typedef enum Quad_AddrType_type{
+	QUAD_ADDR_TYPE_EMPTY = 0,
+
 	QUAD_ADDR_TYPE_NAME = 1,
 	QUAD_ADDR_TYPE_TEMP,
 	QUAD_ADDR_TYPE_CONSTANT,
@@ -82,6 +84,16 @@ typedef struct Quad_Node{
 	Quad_Node *next;
 	Quad_Node *previous;
 } Quad_Node;
+
+
+////////////////////////////////
+// Constructors & destructors //
+////////////////////////////////
+
+
+Quad_Node *Quad_Node_new();
+
+void Quad_Node_destroy(Quad_Node *quad_ptr);
 
 
 #endif
