@@ -44,7 +44,15 @@ typedef enum Quad_Op_type {
 	QUAD_OP_JUMP_NE,
 
 	// Calls
-	// Not implemented!
+	QUAD_OP_CALL,
+
+	// Labels
+	QUAD_OP_LABEL,
+	QUAD_OP_GOTO,
+
+	// IO
+	QUAD_OP_READ,
+	QUAD_OP_WRITE,
 
 	QUAD_OP_UNKNOWN = -1,
 
@@ -54,7 +62,7 @@ typedef enum Quad_AddrType_type{
 	QUAD_ADDR_TYPE_EMPTY = 0,
 
 	QUAD_ADDR_TYPE_NAME = 1,
-	QUAD_ADDR_TYPE_TEMP,
+	QUAD_ADDR_TYPE_REG,
 	QUAD_ADDR_TYPE_CONSTANT,
 
 	QUAD_ADDR_TYPE_UNKOWN = -1,
@@ -67,7 +75,7 @@ typedef enum Quad_AddrType_type{
 
 typedef union Quad_Addr{
 	void *name;
-	int temp;
+	int reg;
 	long long constant;
 } Quad_Addr;
 
